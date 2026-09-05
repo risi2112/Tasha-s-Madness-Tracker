@@ -1,0 +1,44 @@
+<div class="madness-tracker-list">
+  <header class="tracker-toolbar">
+    <button type="button" data-action="checkExpiries">
+      <i class="fa-solid fa-clock-rotate-left"></i> {{localize "MADNESS.TrackerApp.CheckExpiries"}}
+    </button>
+  </header>
+
+  {{#if hasRows}}
+    <table class="tracker-table">
+      <thead>
+        <tr>
+          <th>{{localize "MADNESS.TrackerApp.ColActor"}}</th>
+          <th>{{localize "MADNESS.TrackerApp.ColType"}}</th>
+          <th>{{localize "MADNESS.TrackerApp.ColRemaining"}}</th>
+          <th>{{localize "MADNESS.TrackerApp.ColActions"}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each rows as |row|}}
+          <tr>
+            <td>{{row.actorName}}</td>
+            <td title="{{row.sourceText}}">{{row.typeLabel}}</td>
+            <td>{{row.remaining}}</td>
+            <td class="row-actions">
+              <button type="button" data-action="recover" data-actor-id="{{row.actorId}}" data-affliction-id="{{row.afflictionId}}" title="{{localize 'MADNESS.TrackerApp.Recover'}}">
+                <i class="fa-solid fa-heart-pulse"></i>
+              </button>
+              {{#if row.nextType}}
+                <button type="button" data-action="escalate" data-actor-id="{{row.actorId}}" data-affliction-id="{{row.afflictionId}}" data-next-type="{{row.nextType}}" title="{{localize 'MADNESS.TrackerApp.Escalate'}} {{row.nextTypeLabel}}">
+                  <i class="fa-solid fa-arrow-up"></i>
+                </button>
+              {{/if}}
+              <button type="button" data-action="clear" data-actor-id="{{row.actorId}}" data-affliction-id="{{row.afflictionId}}" title="{{localize 'MADNESS.TrackerApp.Clear'}}">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p class="hint">{{localize "MADNESS.TrackerApp.NoAfflictions"}}</p>
+  {{/if}}
+</div>

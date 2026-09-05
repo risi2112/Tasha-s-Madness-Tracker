@@ -1,0 +1,117 @@
+.madness-tracker.chat-card.save-request {
+  border: 1px solid #5c1a1a;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background: rgba(92, 26, 26, 0.05);
+}
+.madness-tracker.chat-card .card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-bottom: 1px solid #782e2e;
+  margin-bottom: 4px;
+}
+.madness-tracker.chat-card .card-header h3 {
+  margin: 0;
+  font-size: 1.05em;
+}
+.madness-tracker.chat-card .flavor {
+  font-style: italic;
+  margin: 2px 0;
+}
+.madness-tracker.chat-card .dc-line {
+  font-weight: bold;
+  margin: 2px 0 6px;
+}
+.madness-tracker.chat-card .madness-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.madness-tracker.chat-card .manual-entry {
+  display: flex;
+  gap: 4px;
+}
+.madness-tracker.chat-card .manual-entry input {
+  width: 70px;
+}
+.madness-tracker.chat-card .result.failed {
+  color: #a11d1d;
+  font-weight: bold;
+}
+.madness-tracker.chat-card .result.passed {
+  color: #1d7a1d;
+  font-weight: bold;
+}
+.madness-tracker.chat-card .table-result {
+  border-top: 1px dashed #782e2e;
+  padding-top: 4px;
+  margin-top: 4px;
+}
+
+.madness-check-app .form-group,
+.madness-tracker-app .form-group {
+  margin-bottom: 8px;
+}
+.madness-check-app .form-row {
+  display: flex;
+  gap: 12px;
+}
+.madness-check-app .form-row .form-group {
+  flex: 1;
+}
+.madness-check-app .mode-fields {
+  display: flex;
+  gap: 16px;
+}
+.madness-check-app .hint {
+  font-size: 0.85em;
+  opacity: 0.75;
+  margin: 2px 0 0;
+}
+.madness-check-app .target-toolbar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.madness-check-app .target-toolbar a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.madness-check-app .target-list {
+  max-height: 160px;
+  overflow-y: auto;
+  border: 1px solid var(--color-border-light-tertiary, #999);
+  border-radius: 3px;
+  padding: 4px 8px;
+}
+.madness-check-app .target-item {
+  display: block;
+  padding: 2px 0;
+}
+.madness-check-app .form-footer {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.madness-tracker-app .tracker-toolbar {
+  margin-bottom: 6px;
+}
+.madness-tracker-app .tracker-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.madness-tracker-app .tracker-table th,
+.madness-tracker-app .tracker-table td {
+  border-bottom: 1px solid var(--color-border-light-tertiary, #999);
+  padding: 4px 6px;
+  text-align: left;
+}
+.madness-tracker-app .row-actions {
+  display: flex;
+  gap: 4px;
+}
+.madness-tracker-app .row-actions button {
+  width: 28px;
+  padding: 2px;
+}

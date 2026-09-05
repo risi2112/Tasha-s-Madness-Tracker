@@ -1,0 +1,33 @@
+<div class="madness-tracker chat-card save-request">
+  <header class="card-header">
+    <img src="icons/magic/perception/eye-slit-red.webp" width="36" height="36" alt=""/>
+    <h3>{{title}}</h3>
+  </header>
+  {{#if flavor}}<p class="flavor">{{flavor}}</p>{{/if}}
+  <p class="dc-line">{{localize "MADNESS.Chat.DCLine" dc=dc ability=abilityLabel}}</p>
+
+  {{#unless resolved}}
+    <div class="madness-actions">
+      <button type="button" data-action="roll-save">
+        <i class="fa-solid fa-dice-d20"></i> {{localize "MADNESS.Chat.RollSave"}}
+      </button>
+      <div class="manual-entry">
+        <input type="number" class="manual-total" placeholder="{{localize 'MADNESS.Chat.ManualPlaceholder'}}"/>
+        <button type="button" data-action="submit-manual">{{localize "MADNESS.Chat.Submit"}}</button>
+      </div>
+    </div>
+  {{else}}
+    <p class="result {{outcomeClass}}">
+      {{localize "MADNESS.Chat.Total"}}: <strong>{{total}}</strong> — {{outcomeLabel}}
+    </p>
+    {{#if failed}}
+      {{#if tableRolled}}
+        <p class="table-result">{{tableResultText}}</p>
+      {{else}}
+        <button type="button" data-action="roll-table" data-madness-type="{{madnessType}}">
+          <i class="fa-solid fa-scroll"></i> {{tableButtonLabel}}
+        </button>
+      {{/if}}
+    {{/if}}
+  {{/unless}}
+</div>

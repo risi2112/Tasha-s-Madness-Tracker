@@ -1,0 +1,43 @@
+{
+  "id": "tashas-madness-tracker",
+  "title": "Tasha's Madness Tracker",
+  "description": "Trigger Wisdom saves for fright/horror, prompt players to roll, and automatically track Short-Term, Long-Term, and Indefinite Madness (2014 DMG rules) with durations, table rolls, and expiry.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0"
+        }
+      }
+    ]
+  },
+  "authors": [
+    {
+      "name": "risi2112"
+    }
+  ],
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/madness-tracker.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "url": "https://github.com/risi2112/Tasha-s-Madness-Tracker",
+  "manifest": "https://raw.githubusercontent.com/risi2112/Tasha-s-Madness-Tracker/main/module.json",
+  "download": "https://github.com/risi2112/Tasha-s-Madness-Tracker/releases/latest/download/module.zip",
+  "license": "LICENSE"
+}
