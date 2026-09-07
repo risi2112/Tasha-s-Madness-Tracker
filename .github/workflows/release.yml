@@ -23,9 +23,9 @@ jobs:
         run: |
           TAG="v$(node -p "require('./module.json').version")"
           if gh release view "$TAG" >/dev/null 2>&1; then
-            gh release upload "$TAG" module.zip --clobber
+            gh release upload "$TAG" module.zip module.json --clobber
           else
-            gh release create "$TAG" module.zip \
+            gh release create "$TAG" module.zip module.json \
               --title "Tasha's Madness Tracker $TAG" \
               --notes "Automated build from ${{ github.sha }}."
           fi
